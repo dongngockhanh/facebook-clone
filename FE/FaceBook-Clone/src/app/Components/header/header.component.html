@@ -1,0 +1,21 @@
+<header class="navbar">
+    <div class="logo" routerLink="/" routerLinkActive="active">Facệbốok</div>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Tìm kiếm" [(ngModel)]="keyWordSearch" name="keyWordSearch" (input)="searchUser()">
+        <span class="clear-input" *ngIf="keyWordSearch.length > 0" (click)="clearInput()">✖️</span> <!-- Dấu x để xóa nội dung -->
+    </div>    <div class="search-results" *ngIf="keyWordSearch.length > 0">
+        <div *ngIf="listUserFind.length === 0" class="result-item">
+            Không có kết quả
+        </div>
+        <div *ngFor="let result of listUserFind" class="result-item">
+            {{ result.email }}
+        </div>
+    </div>
+    <div class="user-menu">
+        <span class="user-icon" routerLink="/profile" routerLinkActive="active">👤</span>
+        <span class="notifications">🔔</span>
+        <span class="settings">⚙️</span>
+        <span class="logout" (click)="logout()">🚪</span>
+        <!-- <p>{{ 10000 | currency:'VND':'symbol':'1.0-0' }}</p> -->
+    </div>
+</header>

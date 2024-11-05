@@ -1,0 +1,22 @@
+<div class="container flex">
+    <div class="facebook-page flex">
+      <div class="text">
+        <h1>facebook</h1>
+        <p>
+          Kết nối với bạn bè và thế giới </p>
+        <p> xung quanh bạn trên Facebook.</p>
+      </div>
+      <form action="#">
+        <input type="email" placeholder="Email hoặc số điện thoại" required [(ngModel)]="email" name="email">
+        <input type="password" placeholder="Mật khẩu" required [(ngModel)]="password" name="password">
+        <div class="link">
+          <button type="submit" class="login" (click)="clickLogin()">Đăng nhập</button>
+          <a href="#" class="forgot">Quên mật khẩu?</a>
+        </div>
+        <hr>
+        <div class="button">
+          <a href="#">Tạo tài khoản mới</a>
+        </div>
+      </form>
+    </div>
+</div>

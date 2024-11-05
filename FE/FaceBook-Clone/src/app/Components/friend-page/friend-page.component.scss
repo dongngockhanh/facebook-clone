@@ -1,0 +1,107 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ebee;
+    overflow: hidden;
+}
+.content {
+    display: flex;
+    margin: 20px;
+    min-height: 100vh
+  }
+  .menu{
+    width: 250px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    max-height: max-content;
+  }
+  .menu h2{
+    margin-top: 0;
+    padding: 8px;
+  }
+  .menu ul{
+    list-style-type: none;
+    padding: 0;
+  }
+  .menu li{
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin: 15px 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+  }
+  .menu li:hover{
+    background-color: #f0f2f5;
+  }
+  .show-choice{
+    // background-color: red;
+    flex: 1;
+    margin: 0 0 0 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  .friend-list .friend-requests{
+    // display: flex;
+  }
+  h2{
+    margin: 0;
+    padding: 8px;
+  }
+  .friend-card, .friend-request-card{
+    margin: 15px 8px;
+    padding: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    max-width: max-content;
+  }
+  .user-image {
+    
+  }
+  .actions{
+    display: flex;
+    flex-direction: column;
+  }
+  .actions button{
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  .actions button:hover {
+    filter: brightness(0.9); /* Giảm độ sáng xuống 10% */
+  }
+  .actions .accept-btn{
+    background-color: rgb(49, 116, 240);
+  }
+  .actions .decline-btn{
+    color: black;
+    background-color: rgb(207, 209, 209);
+  }
+  .actions .remove-btn{
+    color: #e9ebee;
+    background-color: rgb(235, 42, 42);
+  }
+  .name{
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .friend-requests-container, .friend-list-container{
+    display: flex;
+    gap: 16px; /* khoảng cách giữa các phần tử */
+    justify-content: space-between;
+    flex-wrap: wrap; /* cho phép xuống hàng khi phần tử vượt quá chiều rộng */
+  }

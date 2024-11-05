@@ -1,0 +1,52 @@
+<app-header></app-header>
+<!-- <button (click)="logout()">logout</button> -->
+ <body>
+    <main class="content">
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <img draggable="false" height="36" width="36" alt="" class="xz74otr" referrerpolicy="origin-when-cross-origin" src="https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/eECk3ceTaHJ.png">
+                    Trang chủ
+                    </li>
+                <li routerLink="/friends" routerLinkActive="active">
+                    <i data-visualcompletion="css-img" class=""
+                        style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/-GSeaf19sqF.png');background-position:0 -333px;background-size:auto;width:36px;height:36px;background-repeat:no-repeat;display:inline-block"></i>
+                    Bạn bè</li>
+                <li>
+                    <i data-visualcompletion="css-img" class="" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yb/r/_1OfIyrMZYU.png&quot;); background-position: 0px -83px; background-size: auto; width: 36px; height: 36px; background-repeat: no-repeat; display: inline-block;"></i>
+                    Messenger</li>
+                <li>
+                    <i data-visualcompletion="css-img" class="" style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/-GSeaf19sqF.png');background-position:0 -37px;background-size:auto;width:36px;height:36px;background-repeat:no-repeat;display:inline-block"></i>
+                    Nhóm</li>
+                <li>
+                    <i data-visualcompletion="css-img" class="" style="background-image:url('https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/-GSeaf19sqF.png');background-position:0 -296px;background-size:auto;width:36px;height:36px;background-repeat:no-repeat;display:inline-block"></i>
+                    Sự kiện</li>
+            </ul>
+        </aside>
+        <section class="news-feed">
+            <div class="create-post">
+                <input type="text" placeholder="Bạn đang nghĩ gì vậy?" class="post-input" [(ngModel)]="content" name="content">
+                <button class="post-button" (click)="create()">Đăng</button>
+            </div>
+            <div class="post" *ngFor="let item of listPosts">
+                <div class="post-header">{{item.email}}</div>
+                <div class="post-content">{{item.content}}</div>
+                <div class="post-footer">Like | Comment | Share</div>
+            </div>
+            <!-- <div class="post">
+                <div class="post-header">User 2</div>
+                <div class="post-content">Another post goes here. Enjoy your day!</div>
+                <div class="post-footer">Like | Comment | Share</div>
+            </div> -->
+        </section>
+        <aside class="right-sidebar">
+            <h3>Người liên hệ</h3>
+            <ul>
+                <li>Friend 1</li>
+                <li>Friend 2</li>
+                <li>Friend 3</li>
+                <li>Friend 4</li>
+            </ul>
+        </aside>
+    </main>
+ </body>

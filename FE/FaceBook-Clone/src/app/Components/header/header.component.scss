@@ -1,0 +1,97 @@
+/* Bố cục của Navbar */
+.navbar {
+    display: flex; /* Sử dụng Flexbox cho bố cục */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Phân bố khoảng cách giữa các phần tử */
+    padding: 10px 20px; /* Padding cho khoảng cách bên trong */
+    background-color: #3b5998; /* Màu nền của navbar */
+    position: sticky; /* Ghim header khi cuộn */
+    top: 0; /* Ghim ở đầu trang */
+    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng để tách biệt header khỏi nội dung bên dưới */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px; /* Kích thước chữ cho logo */
+    font-weight: bold; /* Đậm chữ logo */
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Ô tìm kiếm */
+.search-bar {
+    width: 300px; padding: 8px; border-radius: 20px; border: none; outline: none;
+}
+
+/* Kết quả tìm kiếm */
+.search-results {
+    position: absolute; /* Để định vị dưới ô input */
+    top: calc(100% + 5px); /* Đặt khung dưới thẻ input */
+    left: 49.3%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Đưa khung về giữa */
+    width: 315px; /* Đặt chiều rộng khung */
+    max-height: 150px; /* Chiều cao tối đa của khung */
+    border: 1px solid #ccc; /* Đường viền khung */
+    background-color: #fff; /* Màu nền của khung */
+    overflow-y: auto; /* Thêm thanh cuộn khi cần thiết */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng khung */
+    z-index: 10; /* Đảm bảo khung hiển thị trên các phần tử khác */
+    border-radius: 8px;
+}
+
+/* Mục kết quả tìm kiếm */
+.result-item {
+    padding: 10px; /* Padding cho các item kết quả */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+}
+
+.result-item:hover {
+    background-color: #f1f1f1; /* Hiệu ứng hover cho item */
+}
+
+/* Menu người dùng */
+.user-menu {
+    display: flex; /* Sử dụng Flexbox cho menu */
+    align-items: center; /* Căn giữa các biểu tượng */
+}
+
+.user-icon, .notifications, .settings, .logout {
+    margin-left: 15px; /* Khoảng cách giữa các biểu tượng */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar, .search-results {
+        width: 90%; /* Đặt chiều rộng theo phần trăm để phù hợp với màn hình nhỏ */
+    }
+}
+
+/* Padding cho body để tránh bị che khuất bởi header */
+body {
+    padding-top: 60px; /* Đảm bảo nội dung không bị che bởi header */
+}
+.search-container {
+    position: relative; /* Để định vị dấu x bên trong ô input */
+    display: flex; /* Sử dụng Flexbox để căn chỉnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.clear-input {
+    position: absolute; /* Định vị dấu x */
+    right: 10px; /* Khoảng cách từ lề phải */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Đưa dấu x vào giữa */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    font-size: 16px; /* Kích thước chữ cho dấu x */
+    color: #888; /* Màu cho dấu x */
+    line-height: 0; /* Đảm bảo không có khoảng trống xung quanh */
+}
+
+.clear-input:hover {
+    color: #f00; /* Đổi màu khi hover */
+}
+

@@ -1,0 +1,112 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9ebee;
+  overflow: hidden;
+  // padding-top: 50px;
+}
+
+.content {
+  display: flex;
+  margin: 20px;
+  min-height: 100vh
+}
+
+.sidebar, .right-sidebar {
+  width: 250px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  max-height: max-content;
+}
+
+.sidebar ul, .right-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li, .right-sidebar li {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin: 15px 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.sidebar li img {
+  margin-right: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+.sidebar li i {
+  margin-right: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+
+.sidebar li:hover, .right-sidebar li:hover {
+  background-color: #f0f2f5;
+}
+
+.news-feed {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.create-post {
+  display: flex;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.post-button {
+  background-color: #3b5998;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.post-button:hover {
+  background-color: #334d84;
+}
+
+.post {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  font-weight: bold;
+  color: #3b5998;
+  margin-bottom: 5px;
+}
+
+.post-content {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.post-footer {
+  color: #555;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
