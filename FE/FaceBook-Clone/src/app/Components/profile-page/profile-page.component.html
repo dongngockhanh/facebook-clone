@@ -19,36 +19,14 @@
             </div>
             <!-- Menu điều hướng -->
             <div class="navigation-menu">
-              <button>Bài viết</button>
-              <button>Giới thiệu</button>
-              <button>Bạn bè</button>
-              <button>Ảnh</button>
-              <button>Video</button>
+              <button routerLink="/profile" routerLinkActive="active">Bài viết</button>
+              <button routerLink="/profile/about" routerLinkActive="active" >Giới thiệu</button>
+              <button routerLink="/profile/friends" routerLinkActive="active">Bạn bè</button>
+              <button routerLink="/profile/photos" routerLinkActive="active">Ảnh</button>
+              <button routerLink="/profile/videos" routerLinkActive="active">Video</button>
             </div>
         </div>
     </div>
-    <div class="profile-page">
-        <!-- Dòng thời gian -->
-        <div class="timeline">
-          <div class="post">
-            <div class="post-header">
-              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Avatar" class="post-avatar">
-              <div>
-                <h3>Nguyễn Văn A</h3>
-                <p>Thời gian đăng bài</p>
-              </div>
-            </div>
-            <div class="post-content">
-              <p>Nội dung bài viết...</p>
-              <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=600" alt="Post Image">
-            </div>
-            <div class="post-actions">
-              <button>Thích</button>
-              <button>Bình luận</button>
-              <button>Chia sẻ</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <router-outlet></router-outlet>
 </body>
   

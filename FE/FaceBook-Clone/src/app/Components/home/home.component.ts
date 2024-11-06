@@ -45,7 +45,9 @@ export class HomeComponent {
       // this.post.setUserId(1);
       this.postService.createPost(this.post).subscribe({
         next: (respose) => {
-          this.listPosts.push(respose);
+          // this.listPosts.push(respose);
+          this.content="";
+          this.getAllPost();
         },
         error: (err) => {
           console.error(err);
